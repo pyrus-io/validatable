@@ -3,7 +3,7 @@
 
 1. Create a form structure you want to validate, 
     - Conform to ValidatableStructure and indicate the properties you want evaluated
-```
+```swift
 /// RegisterForm.Swift
 struct RegisterForm: Equatable, ValidatableStructure {
     
@@ -32,7 +32,7 @@ struct RegisterForm: Equatable, ValidatableStructure {
 ```
 
 2. Implement it in UI
-```
+```swift
 struct RegisterForm: View {
 
     struct RegisterFormState {
