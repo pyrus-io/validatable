@@ -3,7 +3,6 @@ import Foundation
 public enum ValidationState {
     case unvisited
     case active
-//    case filled
     case valid
     case error(String)
     
