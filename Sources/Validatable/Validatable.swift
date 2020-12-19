@@ -2,6 +2,7 @@ import Foundation
 
 @propertyWrapper
 public struct Validatable<WrappedValue> {
+    
     public let rules: [ValidationRule<WrappedValue>]
     
     public var projectedValue: Validatable<WrappedValue>  {

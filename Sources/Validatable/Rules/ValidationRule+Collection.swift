@@ -59,18 +59,18 @@ public extension ValidationRule where Value: Collection {
     }
 }
 
-//extension ValidationRule where Value: Collection, Value.Element: ValidatableStructure {
-//    static func validChildren (
-//        errorMessage: String = "Issue with section"
-//    ) -> ValidationRule<Value> {
-//        return ValidationRule { values in
-//            do {
-//                try values.forEach { value in
-//                    try value.assertValidity()
-//                }
-//            } catch {
-//                throw ValidationError.message(errorMessage)
-//            }
-//        }
-//    }
-//}
+public extension ValidationRule where Value: Collection, Value.Element: ValidatableStructure {
+    static func validChildren (
+        errorMessage: String = "Issue with section"
+    ) -> ValidationRule<Value> {
+        return ValidationRule { values in
+            do {
+                try values.forEach { value in
+                    try value.assertValidity()
+                }
+            } catch {
+                throw ValidationError.message(errorMessage)
+            }
+        }
+    }
+}
